@@ -1,0 +1,30 @@
+Next: Problems building Emacs, Up: Compiling and installing Emacs   [Contents][Index]
+
+7.1 How do I install Emacs?
+
+This answer is meant for users of Unix and Unix-like systems. Users of other operating systems should see the series of questions beginning with Emacs for MS-DOS, which describe where to get non-Unix source and binaries, and how to install Emacs on those systems.
+
+Most GNU/Linux distributions provide pre-built Emacs packages. If Emacs is not installed already, you can install it by running (as root) a command such as ‘yum install emacs’ (Red Hat and derivatives) or ‘apt-get install emacs’ (Debian and derivatives).
+
+If you want to compile Emacs yourself, read the file INSTALL in the source distribution. In brief:
+
+First download the Emacs sources. See Current GNU distributions, for a list of ftp sites that make them available. On ftp.gnu.org, the main GNU distribution site, sources are available as
+ftp://ftp.gnu.org/pub/gnu/emacs/emacs-VERSION.tar.gz
+
+(Replace ‘VERSION’ with the relevant version number, e.g., ‘23.1’.)
+
+Next uncompress and extract the source files. This requires the gzip and tar programs, which are standard utilities. If your system does not have them, these can also be downloaded from ftp.gnu.org.
+GNU tar can uncompress and extract in a single-step:
+
+tar -zxvf emacs-VERSION.tar.gz
+At this point, the Emacs sources should be sitting in a directory called emacs-VERSION. On most common Unix and Unix-like systems, you should be able to compile Emacs with the following commands:
+cd emacs-VERSION
+./configure         # configure Emacs for your particular system
+make                # use Makefile to build components, then Emacs
+If the make completes successfully, the odds are fairly good that the build has gone well. (See Problems building Emacs, if you weren’t successful.)
+
+By default, Emacs is installed in /usr/local. To actually install files, become the superuser and type
+make install
+Note that ‘make install’ will overwrite /usr/local/bin/emacs and any Emacs Info files that might be in /usr/local/share/info/.
+
+Next: Problems building Emacs, Up: Compiling and installing Emacs   [Contents][Index]
