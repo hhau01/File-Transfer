@@ -26,3 +26,11 @@ To check for integrity of file use:
 ````
 md5sum test.txt test2.txt
 ````
+
+Sample output1:
+
+![alt text](https://github.com/hhau01/File-Transfer/blob/master/output1.png "Output 1")
+
+Sample output2:
+
+![alt text](https://github.com/hhau01/File-Transfer/blob/master/output2.png "Output 2")
